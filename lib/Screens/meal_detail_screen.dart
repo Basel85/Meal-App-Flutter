@@ -9,12 +9,12 @@ class mealdetails extends StatelessWidget {
   mealdetails(this.togglemeals,this.cc);
   @override
   Widget build(BuildContext context) {
-    final mealId = ModalRoute.of(context).settings.arguments as String;
+    final mealId = ModalRoute.of(context)!.settings.arguments as String;
     final selectedmeal = DUMMY_MEALS.firstWhere((meal) => meal.id==mealId);
     Widget Build_container1(BuildContext ctx,String text){
       return Container(
         margin: EdgeInsets.symmetric(vertical: 10),
-        child: Text(text,style: Theme.of(ctx).textTheme.title,),
+        child: Text(text,style: Theme.of(ctx).textTheme.subtitle1,),
       );
     }
     Widget Build(Widget child){
@@ -49,7 +49,7 @@ class mealdetails extends StatelessWidget {
                         color: Theme.of(context).accentColor,
                         child: Padding(
                           padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-                          child: Text(selectedmeal.ingredients[index],style:Theme.of(context).textTheme.title,),
+                          child: Text(selectedmeal.ingredients[index],style:Theme.of(context).textTheme.subtitle1,),
                         )
                     );
                   },

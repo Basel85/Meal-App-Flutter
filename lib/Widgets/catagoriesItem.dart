@@ -21,7 +21,7 @@ class catagoriesItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(15),
       child: Container(
         padding: EdgeInsets.all(25),
-        child: Text(title,style: Theme.of(context).textTheme.title,),
+        child: Text(title,style: Theme.of(context).textTheme.subtitle1,),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [

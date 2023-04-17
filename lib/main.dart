@@ -28,23 +28,23 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       filters=filtersdata;
       avaliablemeals=DUMMY_MEALS.where((meal) {
-        if(filters['gluten'] && !meal.isGlutenFree){
+        if(filters['gluten']! && !meal.isGlutenFree){
           return false;
         }
-        if(filters['lactose'] && !meal.isLactoseFree){
+        if(filters['lactose']! && !meal.isLactoseFree){
           return false;
         }
-        if(filters['vegan'] && !meal.isVegan){
+        if(filters['vegan']! && !meal.isVegan){
           return false;
         }
-        if(filters['vegetarian'] && !meal.isVegetarian){
+        if(filters['vegetarian']! && !meal.isVegetarian){
           return false;
         }
         return true;
     }).toList();
     });
   }
-  String togglemeals(String mealId){
+  String? togglemeals(String mealId){
     final existingIndex=favouritemeals.indexWhere((meal) => meal.id==mealId);
     if(existingIndex>=0){
       setState(() {
@@ -56,6 +56,7 @@ class _MyAppState extends State<MyApp> {
         favouritemeals.add(DUMMY_MEALS.firstWhere((meal) => meal.id==mealId));
       });
     }
+    return null;
   }
   bool cc(String id){
     return favouritemeals.any((meal)=>meal.id==id);
@@ -68,13 +69,13 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
         textTheme: TextTheme(
-          body1: TextStyle(
+          bodyText1: TextStyle(
             color: Color.fromRGBO(245, 198, 123, 0.3),
           ),
-          body2: TextStyle(
+          bodyText2: TextStyle(
             color: Color.fromRGBO(245, 198, 123, 0.3),
           ),
-          title: TextStyle(
+          subtitle1: TextStyle(
             fontSize: 18,
             fontFamily: 'RobotoCondensed',
           )
@@ -103,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("meal app",style: Theme.of(context).textTheme.title,),
+        title: Text("meal app",style: Theme.of(context).textTheme.subtitle1,),
       ),
       body: catagories_Screens(),
     );

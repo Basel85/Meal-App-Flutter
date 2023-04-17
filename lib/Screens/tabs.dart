@@ -14,7 +14,7 @@ class Tabs extends StatefulWidget {
 class _TabsState extends State<Tabs> {
 
   int selected_screen=0;
-  List<Map<String,Object>> pages;
+  late List<Map<String,dynamic>> pages;
   initState() {
     pages=[
       {
@@ -46,11 +46,11 @@ class _TabsState extends State<Tabs> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.category),
-            title: Text("Categories")
+            label: "Categories"
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
-              title: Text("Favourite")
+              label: "Favourite"
           ),
         ],
         selectedItemColor: Colors.red,

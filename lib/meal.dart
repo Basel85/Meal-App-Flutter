@@ -27,19 +27,19 @@ class Meal {
 
   const Meal(
    {
-    @required this.id,
-     @required this.affordability,
-     @required this.catagories,
-     @required this.complexity,
-     @required this.duration,
-     @required this.imageUrl,
-     @required this.ingredients,
-     @required this.isGlutenFree,
-     @required this.isLactoseFree,
-     @required this.isVegan,
-     @required this.isVegetarian,
-     @required this.steps,
-     @required this.title,
+    required this.id,
+     required this.affordability,
+     required this.catagories,
+     required this.complexity,
+     required this.duration,
+     required this.imageUrl,
+     required this.ingredients,
+     required this.isGlutenFree,
+     required this.isLactoseFree,
+     required this.isVegan,
+     required this.isVegetarian,
+     required this.steps,
+     required this.title,
    }
    );
 }

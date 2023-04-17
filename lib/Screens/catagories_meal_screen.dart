@@ -12,7 +12,7 @@ class catagoriesmealscreen extends StatefulWidget {
 class _catagoriesmealscreen extends State<catagoriesmealscreen> {
   @override
   Widget build(BuildContext context) {
-    final routearg=ModalRoute.of(context).settings.arguments as Map<String,String>;
+    final routearg=ModalRoute.of(context)!.settings.arguments as Map<String,String>;
     final catagoryID=routearg['id'];
     final catagorytitle=routearg['title'];
     final catagorymeals=widget.avaliablemeals.where((meal)  {
@@ -20,7 +20,7 @@ class _catagoriesmealscreen extends State<catagoriesmealscreen> {
     }).toList();
     return Scaffold(
       appBar: AppBar(
-        title: Text(catagoryID),
+        title: Text(catagoryID!),
       ),
       body: ListView.builder(itemBuilder: (ctx,index){
         return mealitem(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_app/Screens/Filters_Screen.dart';
 class MainDrawer extends StatelessWidget {
   @override
-  Widget listtile(String text,IconData icon,Function tap){
+  Widget listtile(String text,IconData icon,Function() tap){
     return ListTile(
       leading: Icon(icon,size: 26,),
       title: Text(text,style: TextStyle(fontSize: 24,color : Colors.black,fontWeight: FontWeight.w900,fontFamily: 'RobotoCondensed'),),

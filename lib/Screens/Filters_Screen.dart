@@ -19,14 +19,14 @@ class _FiltersState extends State<Filters> {
 
   bool isVegetarian = false;
   initState(){
-    isGlutenFree=widget.currentFilters['gluten'];
-    isLactoseFree=widget.currentFilters['lactose'];
-    isVegan = widget.currentFilters['vegan'];
-    isVegetarian=widget.currentFilters['vegetarian'];
+    isGlutenFree=widget.currentFilters['gluten']!;
+    isLactoseFree=widget.currentFilters['lactose']!;
+    isVegan = widget.currentFilters['vegan']!;
+    isVegetarian=widget.currentFilters['vegetarian']!;
     super.initState();
   }
 
-  Widget Filters(String title, String subtitle, bool filter, Function s) {
+  Widget Filters(String title, String subtitle, bool filter, Function(bool) s) {
     return SwitchListTile(
       title: Text(title),
       value: filter,

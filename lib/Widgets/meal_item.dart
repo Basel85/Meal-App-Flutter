@@ -9,21 +9,21 @@ class mealitem extends StatelessWidget {
   final Complexity complexity;
   final Affordability affordability;
   mealitem({
-     @required this.image, @required this.title,  @required this.duration, @required this.complexity, @required this.affordability,@required this.id
+     required this.image, required this.title,  required this.duration, required this.complexity, required this.affordability,required this.id
 });
   String get complexitytext{
     switch(complexity){
-      case Complexity.Simple : return "Simple";break;
-      case Complexity.Challenging : return "Challenging";break;
-      case Complexity.Hard : return "Hard";break;
+      case Complexity.Simple : return "Simple";
+      case Complexity.Challenging : return "Challenging";
+      case Complexity.Hard : return "Hard";
       default : return "Unknown";
     }
   }
   String get affordablilitytext{
     switch(affordability){
-      case Affordability.Affordable : return "Affordable";break;
-      case Affordability.Luxurious : return "Luxurious";break;
-      case Affordability.Pricey : return "Pricey";break;
+      case Affordability.Affordable : return "Affordable";
+      case Affordability.Luxurious : return "Luxurious";
+      case Affordability.Pricey : return "Pricey";
       default : return "Unknown";
     }
   }
@@ -73,21 +73,21 @@ class mealitem extends StatelessWidget {
                   children: [
                     Icon(Icons.access_alarm),
                     SizedBox(width: 6,),
-                    Text("${duration} min",style: TextStyle(color: Colors.black),),
+                    Text("$duration min",style: TextStyle(color: Colors.black),),
                   ],
                 ),
                 Row(
                   children: [
                     Icon(Icons.shopping_bag),
                     SizedBox(width: 6,),
-                    Text("${complexitytext} ",style: TextStyle(color: Colors.black),),
+                    Text("$complexitytext ",style: TextStyle(color: Colors.black),),
                   ],
                 ),
                 Row(
                   children: [
                     Icon(Icons.attach_money),
                     SizedBox(width: 6,),
-                    Text("${affordablilitytext} ",style: TextStyle(color: Colors.black),),
+                    Text("$affordablilitytext ",style: TextStyle(color: Colors.black),),
                   ],
                 ),
               ],

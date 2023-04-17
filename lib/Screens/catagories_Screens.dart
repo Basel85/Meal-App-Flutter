@@ -7,7 +7,7 @@ class catagories_Screens extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("meal",style: Theme.of(context).textTheme.title,),
+        title: Text("meal",style: Theme.of(context).textTheme.subtitle1,),
       ),
 
       body: GridView(
